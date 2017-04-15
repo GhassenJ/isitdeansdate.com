@@ -1,0 +1,51 @@
+body {
+    background-color: #eaeaea;
+    text-align: center;
+    overflow: hidden;
+}
+
+div#wow {
+    position: fixed;
+
+    width: 500px;
+    height: 300px;
+    
+    top: 50%;
+    left: 50%;
+    
+    margin-left: -250px;
+    margin-top: -250px;
+    
+    text-align: center;
+	
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+p#rinceton {
+    margin: 0;
+
+    font-weight: bold;
+    font-size: 140pt;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #E87511;
+    text-shadow: 3px 3px 3px #000000;
+}
+
+p#lebeian {
+    font-size: 25pt;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #8F8F8F;
+    
+    text-shadow: 2px 2px 2px #C2C2C2;
+}
+
+#yolo {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+}
