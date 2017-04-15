@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Is it Dean's Date?</title>
+    <title>Is it the NIPS due date?</title>
 
     <!-- standard meta -->
-    <meta name="description" content="Is it currently Dean's Date at Princeton University?" />
-    <meta name="keywords" content="Princeton, Dean's, Date, grade, deflation, weather, machine" />
+    <meta name="description" content="Is today the deadline for NIPS?" />
+    <meta name="keywords" content="NIPS, Neural Information Processing Systems, Conference, Deadline, date, machine, learning, deep, Lecun" />
 
     <!-- Facebook meta -->
-    <meta property="og:title" content="Is it Dean's Date?" />
+    <meta property="og:title" content="Is it the NIPS due date?" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://isitdeansdate.com/" />
-    <meta property="og:image" content="http://isitdeansdate.com/fb_img.jpg" />
-    <meta property="og:description" content="Is it currently Dean's Date at Princeton University?" />
+    <meta property="og:url" content="http://isitnipsdue.date/" />
+    <meta property="og:image" content="http://isitnipsdue.date/fb_img.jpg" />
+    <meta property="og:description" content="Is today the deadline for NIPS?" />
 
     <link rel="stylesheet" href="site.css" />
 </head>
@@ -21,22 +21,7 @@
     <?php
         // List of all Dean's Dates, from https://registrar.princeton.edu/academic-calendar/
         $deans_dates = array(
-            '2013-01-15',
-            '2013-05-14',
-            '2014-01-14',
-            '2014-05-13',
-            '2015-01-13',
-            '2015-05-12',
-            '2016-01-12',
-            '2016-05-10',
-            '2017-01-17',
-            '2017-05-17',
-            '2018-01-16',
-            '2018-05-15',
-            '2019-01-15',
-            '2019-05-14',
-            '2020-01-14',
-            '2020-05-12',
+            '2017-05-19',
         );
 
         // Current time in Princeton, New Jersey
@@ -59,9 +44,9 @@
 
         // Error
         if (is_null($deans_date)) {
-            echo '<div id=wow title="Lucas needs to add more dates! Contact him at {lucasjcmayer} at {gmail}.">';
+            echo '<div id=wow title="Ghassen needs to add more dates! Contact him at {ghassouna} at {gmail}.">';
             echo '<p id="rinceton">:(</p>';
-            echo '<p id="lebeian">Someone tell Lucas!</p>';
+            echo '<p id="lebeian">Someone tell Ghassen!</p>';
             echo '</div>';
         }
 
@@ -78,14 +63,16 @@
             }
 
             // Hover text
-            $sub_text = 'Dean\'s Date is ';
+            $sub_text = 'NIPS\'s Deadline is ';
             if ($diff == 1) {
                 $sub_text .= 'tomorrow!';
             } elseif ($diff == 0) {
                 $sub_text .= 'TODAY!';
             } else {
-                $sub_text .= 'in ' . $diff . ' days...';
+		$karp_diff = $diff/3e-4
+                $sub_text .= 'in ' . $diff . ' days...\n which is' . $karp_diff . '*KARPATHY constant';
             }
+	
 
             echo '<div id=wow title="' . $deans_date->format('l\, F jS\, Y') . '">';
             echo '<p id="rinceton">' . $main_text . '</p>';
@@ -93,18 +80,5 @@
             echo '</div>';
         }
     ?>
-
-    <!-- Facebook "Like" button -->
-    <iframe id="yolo" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fisitdeansdate.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font=tahoma&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
-
-    <!-- Google Analytics -->
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	  ga('create', 'UA-40931103-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
 </body>
 </html>
